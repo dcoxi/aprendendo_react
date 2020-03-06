@@ -1,5 +1,6 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
+var SearchUsers = require('./SearchUser');
 
 var GitHub = createReactClass({
 
@@ -11,29 +12,7 @@ var GitHub = createReactClass({
     render: function () {
         return (
             <div className='container'>
-                <div className='jumbotron'>
-                    <h1>GitHub Info</h1>
-                    <div>
-                        <form onSubmit={this.handleSubmit}>
-                            <div className='form-group'>
-                                <label>Username</label>
-                                <input
-                                    type="text"
-                                    ref="username"
-                                    className='form-control'
-                                    placeholder="Ex: dpc"
-                                />
-                            </div>
-                            <div className=''>
-                                <button
-                                    type="submit"
-                                    className='btn btn-primary'>
-                                    Buscar
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+              <SearchUsers />
             </div>
         );
     }
