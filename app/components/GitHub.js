@@ -2,17 +2,30 @@ var React = require('react');
 var createReactClass = require('create-react-class');
 var SearchUsers = require('./SearchUser');
 
+
+
 var GitHub = createReactClass({
 
-    handleSubmit: function(e){
-        //prevenção ao reload ou postBack
-        e.preventDefault();
-       console.log(this.refs.username.value);
+    getInitialState: function (){
+        return {
+            user:null,
+            repos: [],
+        };
+    },
+    updateUser: function(user){
+        this.setState({user: user});
+    },
+    updateRepos: function(repos){
+        this.setState({repos: repos});
     },
     render: function () {
         return (
             <div className='container'>
-              <SearchUsers />
+               
+              <SearchUsers  
+                updateUser={this.updateUser}
+                updateRepos={this.updateRepos}
+             />
             </div>
         );
     }
