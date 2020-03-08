@@ -1,12 +1,21 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
+var GitHubUser = require('../services/GitHubUser');
+
 
     var SearchUser = createReactClass({
 
         handleSubmit: function (e) {
             //prevenção ao reload ou postBack
             e.preventDefault();
-            console.log(this.refs.username.value);
+          
+            GitHubUser.getByUsername(this.refs.username.value).then(function(response){
+                console.log(response);
+            });
+
+             GitHubUser.getReposByUsername(this.refs.username.value).then(function(response) {
+               console.log(response);
+             });
         },
 
         render: function(){
