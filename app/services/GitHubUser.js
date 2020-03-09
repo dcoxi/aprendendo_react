@@ -5,7 +5,7 @@ var GitHubUserService = {
         return axios.get('https://api.github.com/users/'+username);
     },
     getReposByUsername: function(username){
-        return axios.get('https://api.github.com/users/'+username);
+        return axios.get('https://api.github.com/users/'+username+'/repos');
     }
 };
 

@@ -1,6 +1,7 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
 var SearchUsers = require('./SearchUser');
+var UserInfo = require('./UserInfo');
 
 
 
@@ -26,6 +27,9 @@ var GitHub = createReactClass({
                 updateUser={this.updateUser}
                 updateRepos={this.updateRepos}
              />
+             <UserInfo 
+             user={this.state.user}
+             repos={this.state.repos} />
             </div>
         );
     }

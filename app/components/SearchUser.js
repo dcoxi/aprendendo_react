@@ -21,7 +21,7 @@ var SearchUser = createReactClass({
             <h1>GitHub Info</h1>
             <div className="row">
               <form onSubmit={this.handleSubmit}>
-                <div className="form-group">ss
+                <div className="form-group">
                   <label>Username</label>
                   <input
                     type="text"
