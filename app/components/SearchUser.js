@@ -1,6 +1,7 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
 var GitHubUser = require('../services/GitHubUser');
+var PropTypes = require('prop-types');
 
 var SearchUser = createReactClass({
     handleSubmit: function(e) {
@@ -40,4 +41,11 @@ var SearchUser = createReactClass({
         );
       }
 });
+
+//PropTypes
+
+  updateUser: PropTypes.func.isRequired;
+  updateRepos: PropTypes.func.isRequired;
+
+
 module.exports = SearchUser;

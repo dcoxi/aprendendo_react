@@ -1,6 +1,6 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
-
+var PropTypes = require('prop-types');
 
 function UserInfo (props){
      
@@ -18,5 +18,7 @@ function UserInfo (props){
         return userInfo;
 
 }
+   user: PropTypes.object;
+   repos: PropTypes.array;
 
 module.exports = UserInfo;
