@@ -1,6 +1,8 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
 var PropTypes = require('prop-types');
+var UserRepos = require('./UserRepos');
+
 
 function UserInfo (props){
      
@@ -12,6 +14,9 @@ function UserInfo (props){
              <p>{props.user.name}</p>
    <p>Followers: {props.user.followers} / Following: {props.user.following}</p>
              <p><a className="btn btn-default" href={props.user.html_url} role ="button">View details</a></p>
+            </div>
+            <div className="col-lg-8">
+                <UserRepos repos={props.repos} />
             </div>
         </div>      
         ): null;
